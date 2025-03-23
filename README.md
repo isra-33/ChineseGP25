@@ -17,8 +17,11 @@ Load historical data
  chinese_gp_data = prepare_gp_data(qualifying_data)
 # Preprocess data
  Replace 'DNF' with NaN
+ 
  Encode categorical variables
+ 
  Engineer features (driver/team averages)
+ 
   X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2)
 # Train Model
 model = RandomForestRegressor(n_estimators=100)
