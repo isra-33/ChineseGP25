@@ -35,6 +35,7 @@ results.sort_values('Predicted_Position').reset_index(drop=True)
 Plot feature importance
 
 feature_importance = pd.DataFrame({'Feature': feature_names,'Importance': model.feature_importances_})
+
 sns.barplot(x='Importance', y='Feature', data=feature_importance.sort_values('Importance'))
 # Evaluation
 The model performance is measured using Mean Absolute Error (MAE) and Mean Squared Error (MSE) metrics, providing insight into prediction accuracy.
