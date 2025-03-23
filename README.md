@@ -17,12 +17,9 @@ Load historical data
  chinese_gp_data = prepare_gp_data(qualifying_data)
 # Preprocess data
  Replace 'DNF' with NaN
- 
  Encode categorical variables
- 
  Engineer features (driver/team averages)
- 
-  X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2)
+ X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2)
 # Train Model
 model = RandomForestRegressor(n_estimators=100)
 model.fit(X_train, y_train)
@@ -36,10 +33,8 @@ results = pd.DataFrame({'Driver': drivers, 'Predicted_Position': predicted_posit
 results.sort_values('Predicted_Position').reset_index(drop=True)
 # Visualize Results
 Plot feature importance
-feature_importance = pd.DataFrame({
-    'Feature': feature_names,
-    'Importance': model.feature_importances_
-})
+
+feature_importance = pd.DataFrame({'Feature': feature_names,'Importance': model.feature_importances_})
 sns.barplot(x='Importance', y='Feature', data=feature_importance.sort_values('Importance'))
 # Evaluation
 The model performance is measured using Mean Absolute Error (MAE) and Mean Squared Error (MSE) metrics, providing insight into prediction accuracy.
