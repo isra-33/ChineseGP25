@@ -1,10 +1,13 @@
 # Chinese GP 2025 Race Results Prediction Model
 
-This project predicts Formula 1 race finishing positions for the 2025 Chinese Grand Prix using a Random Forest Regressor model. It leverages historical race and qualifying data, combined with feature engineering, to forecast driver performance based on qualifying results, driver and team averages, and other relevant factors.
+This project predicts Formula 1 race finishing positions for the 2025 Chinese Grand Prix using a Random Forest Regressor model. 
+It leverages historical race and qualifying data, combined with feature engineering, to forecast driver performance based on qualifying results, driver and team averages, and other relevant factors.
 
 ### Goal: Predict driver finishing positions for the Chinese GP 2025
 
-### Data: Historical 2024-2025 F1 results + 2025 Chinese GP qualifying data
+### Data:
+- Historical 2024-2025 F1 results
+- 2025 Chinese GP qualifying data
 
 ### Model: Random Forest Regressor
 
